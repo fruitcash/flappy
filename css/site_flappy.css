@@ -1,0 +1,289 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("../images/bg.png");
+  background-position: center center;
+  background-repeat: repeat-x;
+  animation: animatedBackground 25s linear infinite;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 959px) {
+  body {
+    background-size: cover;
+  }
+}
+
+@font-face {
+  font-family: "04b_19";
+  src: url("../fonts/04b19.eot");
+  src: url("../fonts/04b19.eot#iefix") format("embedded-opentype"),
+    url("../fonts/04b19.woff2") format("woff2"),
+    url("../fonts/04b19.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../images/iphone-flappy.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto 96%;
+}
+
+@media only screen and (max-width: 959px) {
+  .wrapper {
+    background-position: center center;
+  }
+}
+
+.logo {
+  width: 100%;
+
+  text-align: left;
+
+  font-family: "04b_19";
+  font-size: 5rem;
+
+  color: #fff;
+  text-shadow: 2px 0 black, 0 -2px black, -2px 0 black, 0 2px black;
+}
+
+.logo > span {
+  color: #2cff48;
+}
+
+.cta {
+  width: 100%;
+
+  text-align: left;
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 2px 0 black, 0 -2px black, -2px 0 black, 0 2px black;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+
+  margin-top: 0.5rem;
+}
+
+.content {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 1rem;
+}
+
+.content > li > a {
+  background: #fcb700;
+  border: 2px solid #000;
+
+  border-radius: 5px;
+
+  font-family: "04b_19";
+  font-size: 1.2rem;
+
+  padding: 0.4rem;
+
+  text-decoration: none;
+
+  margin-right: 0.5rem;
+
+  color: #fff;
+  text-shadow: 2px 0 black, 0 -2px black, -2px 0 black, 0 2px black;
+
+  transition: all 0.3s;
+
+  cursor: pointer;
+}
+
+.content > li > a:hover {
+  color: #000;
+  text-shadow: 2px 0 #fff, 0 -2px #fff, -2px 0 #fff, 0 2px #fff;
+}
+
+@media only screen and (max-width: 959px) {
+  .logo,
+  .cta {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+  }
+  .content {
+    justify-content: center;
+  }
+
+  .content > li > a {
+    font-size: 1rem;
+  }
+}
